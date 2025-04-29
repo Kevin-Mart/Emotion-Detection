@@ -17,40 +17,51 @@ Desarrollar un sistema capaz de detectar y clasificar emociones en tiempo real p
 ## 🛠️ **Tecnologías Utilizadas:**
 - Python (TensorFlow, Keras, Scikit-learn)
 - OpenCV para análisis de imágenes
-- NLTK / SpaCy para análisis de texto
-- Flask / FastAPI para crear la API
 
----
 
-## 📅 **Cronograma Tentativo (1 mes)**  
+## 📥 ¿Cómo instalar?
 
-### 🕒 **Semana 1:**  
-✅ Definición de objetivos y recopilación de datos.  
-✅ Preprocesamiento de datos (limpieza, etiquetado y análisis exploratorio).  
+### 1. Clonar el repositorio
 
-### 🕒 **Semana 2:**  
-✅ Implementación de modelos base:  
-   - CNN para imágenes.  
-   - RNN/LSTM para texto.  
-✅ Entrenamiento inicial y ajuste de hiperparámetros.  
+Primero necesitas clonar este proyecto en tu máquina local:
 
-### 🕒 **Semana 3:**  
-✅ Evaluación y validación de modelos.  
-✅ Integración de modelos para procesar múltiples entradas.  
+git clone https://tu-repositorio.git
 
-### 🕒 **Semana 4:**  
-✅ Desarrollo de la API REST para exponer el modelo.  
-✅ Creación de una interfaz web básica para probar resultados.  
-✅ Pruebas finales y optimización del sistema.  
 
----
+### 2. Instalaciones requeridas
+Antes de ejecutar el proyecto, necesitas instalar algunas dependencias.
 
-## 👥 **Contribución:**
-Si te apasiona la IA, NLP y el análisis de emociones, ¡únete a nosotros para mejorar esta herramienta! 🚀  
-💡 **Pull requests y sugerencias son bienvenidas.**  
+### 🛠 OpenCV
+OpenCV es una biblioteca de visión por computadora que permite detectar y procesar imágenes.
 
-🔗 **Repositorio:** [Enlace aquí]  
+### Primero instala la versión básica:
 
----
+pip install opencv-python
+Después, reemplaza esta instalación con la versión "contrib", que incluye módulos adicionales necesarios para la detección de emociones:
 
-¿Listo para detectar emociones? 🎭 ¡Colabora ahora! 😊
+
+pip uninstall opencv-python
+pip install opencv-contrib-python
+(La versión contrib contiene algoritmos extra que no están disponibles en la instalación estándar de OpenCV.)
+
+### Crear la carpeta Data
+El proyecto requiere una carpeta llamada Data, donde se almacenarán las imágenes de entrenamiento clasificadas por emociones.
+
+Simplemente crea una carpeta llamada:
+
+Data
+
+### 4. Modificar la ruta de acceso (path) en el código
+Dentro del archivo main.py, ubica la siguiente línea:
+dataPath = 'C:/Users/xdkev/Documents/Uaemex/9/Tecnologias Emergentes/Proyecto/Emotion-Detection/Data'
+Debes cambiar esta ruta para que apunte a la ubicación donde creaste la carpeta Data en tu computadora.
+Por ejemplo:
+dataPath = 'D:/MisProyectos/Emotion-Detection/Data'
+### 🔵 Importante: Usa rutas absolutas y asegúrate de usar la sintaxis correcta de barras (/ o \\) según tu sistema operativo.
+
+### 5. Ejecutar el proyecto
+Una vez configurado todo, ejecuta el archivo principal con el siguiente comando en la terminal:
+
+python main.py
+
+# 🚀 ¡Todo listo para comenzar a detectar emociones!
